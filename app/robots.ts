@@ -1,11 +1,5 @@
 import type { MetadataRoute } from 'next'
-
 export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-    },
-    sitemap: 'https://example.com/sitemap.xml',
-  }
+  const base = 'https://visionmates-mvp.vercel.app'
+  return { rules: { userAgent: '*', allow: '/' }, sitemap: `${base}/sitemap.xml` }
 }
