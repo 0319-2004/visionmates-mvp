@@ -3,9 +3,16 @@ import AuthButton from '@/components/AuthButton'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'VisionMates (MVP)',
-  description: 'Find teammates by shared vision, not contracts.',
-  metadataBase: new URL('https://example.com'),
+  title: 'VisionMates',
+  description: 'ビジョンでつながる仲間募集プラットフォーム',
+  metadataBase: new URL('https://visionmates-mvp.vercel.app'),
+  openGraph: {
+    title: 'VisionMates',
+    description: 'ビジョンでつながる仲間募集プラットフォーム',
+    url: 'https://visionmates-mvp.vercel.app',
+    siteName: 'VisionMates',
+  },
+  verification: { google: 'mpFMiAiYax2z3yTDLYysHAgq-Z6aPhQCNeDxQ-83JZs' }
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -26,3 +33,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   )
 }
+
